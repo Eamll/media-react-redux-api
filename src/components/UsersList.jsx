@@ -21,12 +21,15 @@ function UsersList() {
         return <div>Error fetching data...</div>;
     }
 
-    return <div>
-        {
-            data.map((user) => {
-                return <div key={user.id}>{user.name}</div>;
-            })
-        }</div>;
+    const renderedUsers = data.map((user) => {
+        return <div key={user.id} className='mb-2 border'>
+            <div className='flex p-2 justify-between items-center cursor-pointer'>
+                {user.name}
+            </div>
+        </div>;
+    });
+
+    return renderedUsers;
 }
 
 export default UsersList;
