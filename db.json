@@ -9,6 +9,22 @@
       "id": 2
     }
   ],
-  "albums": [],
+  "albums": [
+    {
+      "name": "Album 1",
+      "id": 1,
+      "userId": 1
+    },
+    {
+      "name": "Album 2",
+      "id": 2,
+      "userId": 1
+    },
+    {
+      "name": "Album 3",
+      "id": 3,
+      "userId": 2
+    }
+  ],
   "photos": []
 }
