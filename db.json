@@ -5,25 +5,50 @@
       "id": 1
     },
     {
-      "name": "Winston Schuppe",
+      "name": "Garry Mann",
       "id": 2
     }
   ],
   "albums": [
     {
-      "name": "Hiking Trip",
-      "id": 1,
-      "userId": 1
+      "userId": 1,
+      "name": "Oriental Cotton Chair",
+      "id": 1
     },
     {
-      "name": "Volcano shot",
-      "id": 2,
-      "userId": 1
+      "userId": 1,
+      "name": "Sleek Rubber Fish",
+      "id": 2
     },
     {
-      "name": "Album 3",
-      "id": 3,
-      "userId": 2
+      "userId": 1,
+      "name": "Modern Cotton Salad",
+      "id": 3
+    },
+    {
+      "userId": 1,
+      "name": "Licensed Wooden Salad",
+      "id": 4
+    },
+    {
+      "userId": 1,
+      "name": "Fantastic Soft Computer",
+      "id": 5
+    },
+    {
+      "userId": 1,
+      "name": "Rustic Concrete Ball",
+      "id": 6
+    },
+    {
+      "userId": 2,
+      "name": "Unbranded Rubber Sausages",
+      "id": 7
+    },
+    {
+      "userId": 2,
+      "name": "Gorgeous Granite Salad",
+      "id": 8
     }
   ],
   "photos": []

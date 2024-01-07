@@ -1,33 +1,40 @@
 import PropTypes from "prop-types"
-import { useGetAlbumsQuery } from "../store"
+import { useGetAlbumsQuery, useAddAlbumMutation } from "../store"
 import Skeleton from "./Skeleton";
-import ExpandablePanel from "./ExpandablePanel";
 import Button from "./Button";
+import AlbumListItem from "./AlbumListItem";
 
 
 const AlbumsList = ({ user }) => {
-    const { data, error, isLoading } = useGetAlbumsQuery(user);
+    const { data, error, isFetching } = useGetAlbumsQuery(user);
+
+    const [addAlbum, { isLoading: isAddingAlbum }] = useAddAlbumMutation(user);
+
+    const handleAddAlbum = () => {
+        addAlbum(user);
+    }
+
     var content;
 
-    if (isLoading) {
-        content = <Skeleton times={3} />
+    if (isFetching) {
+        content = <Skeleton className="h-10 w-full" times={3} />
     } else
-
         if (error) {
             content = <div>Error: {error}</div>
         } else {
             content = data.map((album) => {
-                const header = <div>{album.name}</div>;
-                return <ExpandablePanel key={album.id} header={header}>
-                    List of photos in the album
-                </ExpandablePanel>
+                return <AlbumListItem key={album.id} album={album} />
             }
             );
         }
 
     return <div>
-        <div>
-            Album for {user.name}
+        <div className="m-2 flex flex-row items-center justify-between">
+            <h3 className="text-lg font-bold">Album for {user.name}</h3>
+            <Button onClick={handleAddAlbum} loading={isAddingAlbum}
+            >
+                Add Album
+            </Button>
         </div>
         <div>{content}</div>
     </div>;
