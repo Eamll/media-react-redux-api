@@ -11,12 +11,12 @@
   ],
   "albums": [
     {
-      "name": "Album 1",
+      "name": "Hiking Trip",
       "id": 1,
       "userId": 1
     },
     {
-      "name": "Album 2",
+      "name": "Volcano shot",
       "id": 2,
       "userId": 1
     },
