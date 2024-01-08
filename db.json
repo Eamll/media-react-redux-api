@@ -51,5 +51,14 @@
       "id": 8
     }
   ],
-  "photos": []
+  "photos": [
+    {
+      "url": "https://loremflickr.com/200/200/abstract?lock=6328693376942080",
+      "id": 2
+    },
+    {
+      "url": "https://loremflickr.com/200/200/abstract?lock=8487853042434048",
+      "id": 4
+    }
+  ]
 }
